@@ -162,15 +162,15 @@
 /****** Footer ******/
 footer {
   line-height: 45px;
+  border-top: #b3b3b3 solid 1px;
+  border-radius: 0;
 }
 footer .navbar-nav {
   margin: 0;
 }
 
 .footer-links {
-  border-top: #b3b3b3 solid 1px;
   padding: 37px 0;
-  border-radius: 0;
 }
 .footer-links li {
   padding: 0 21px;

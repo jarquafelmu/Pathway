@@ -165,6 +165,8 @@ $nav_color_list: $nav1_color, $nav2_color, $nav3_color, $nav4_color, $nav5_color
 
 footer {
 	line-height: 45px;
+	border-top: #b3b3b3 solid 1px;
+	border-radius: 0;
 	
 	.navbar-nav {
 		margin:0;	
@@ -172,9 +174,9 @@ footer {
 }
 
 .footer-links{
-	border-top: #b3b3b3 solid 1px;
+	
 	padding: 37px 0;
-	border-radius: 0;
+	
 	
 	li {
 		padding:0 21px;
