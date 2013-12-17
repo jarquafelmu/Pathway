@@ -1,0 +1,42 @@
+// ******************
+//      CONSTANTS
+// ******************
+$red: 	#cb4830;
+$teal: 	#1b8080;
+$gray: 	#666;
+
+/**************************
+   PF-SECTION STYLE SHEET
+ **************************/
+.pf-section {
+	h3 {
+		font-size: 1.2em;
+		color: $red;
+	}	
+	h4 {
+		color: $teal;
+	}	
+	h5 {
+		color: $gray;
+	}	
+	p {
+		text-transform: none;
+	}
+	img {
+		width: 70%;
+	}
+}
+
+.pf-page-header {
+	display: table-cell;
+	vertical-align: middle;
+	text-transform: uppercase;
+	position: relative;
+	
+	img {
+		position: absolute;		
+		top: 15%;
+		left: -64px;
+		max-width:51px;
+	}
+}

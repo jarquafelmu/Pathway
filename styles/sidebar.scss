@@ -1,0 +1,223 @@
+// *************
+//   CONSTANTS
+// *************
+// Colors:
+$dark_gray:	#ddd;
+$link_color: #fff;
+$red: #cb4830;
+
+// ************
+//    MIXINS
+// ************
+@mixin backgroundColor ($isMobile:false) {
+	$mobile-bg-c:#3b3b3b;
+	$desktop-bg-c:#fff;
+	
+	@if ($isMobile == true) {
+		background-color: $mobile-bg-c;
+	} @else {
+		background-color: $desktop-bg-c;
+	}
+}
+
+// Off Canvas
+// $direction: left or right
+// $amount: accepts any numerical amount
+@mixin offcanvas ($direction:left, $amount:0) {
+	#{$direction}:$amount;
+}
+
+// Display SideBar
+@mixin SB_disp ($displayState:false) {
+	@if ($displayState == true) {
+		display:block;
+	} @else {
+		display:none;
+	}
+}
+
+/************************
+	 SIDE BAR STYLE SHEET
+ ************************/
+html, body { height:100%; }
+
+.text-center { padding-top: 20px; }
+
+.col-xs-12 { @include backgroundColor (false); }
+ 
+.navbar-toggle {
+	$direction: right;
+	
+	float: $direction;
+	margin-#{$direction}: 10px;
+} 
+ 
+#sidebar {
+	height: 100%;
+	background-color: #f7f7f7;
+	padding: 0;
+	padding-top: 20px;
+	
+	.nav {
+		.nav {
+			display: none;
+			margin-bottom: 8px;
+			padding-left:1.8em;
+		}
+		
+		li.active {
+			color:$red;
+			
+			a, a:hover, a:visited {
+				color:$red;
+			}
+			
+			.nav {
+				display:block;
+			}
+		}
+		
+		a:hover {
+			.caret {
+				border-left-color: #2a6496;
+				border-top-color: transparent;
+				border-bottom-color: transparent;
+			}
+		}
+			
+		.caret {
+			border-top: 4px solid transparent;
+			border-right: 0px dotted;
+			border-bottom: 4px solid transparent;
+			border-left: 4px solid #428bca;
+		}
+	}
+	
+	$id_name: "#sideNav";
+	@each $affixType in affix, affix-bottom {
+		#{$id_name}.#{$affixType} {
+			position: fixed;
+			width: 100%;
+			top: -22px !important;
+		}
+	}
+	
+	#{$id_name}.affix-top {
+		top: 21%;
+		width: 100%;
+	}
+}
+
+/***************
+	 SIDE BAR
+	 For Tablets
+ ***************/
+
+@media screen and (max-width: 767px) {
+
+/**************
+	 ROW CANVAS
+ **************/
+	$transition:all 0.25s ease-out;
+	$canvas_shift_amt: 41.6%;
+
+	.row_offcanvas {
+		position: relative;
+		-webkit-transition: $transition;
+		-moz-transition: $transition;
+		transition: $transition;
+		
+		#{&}-left {
+			$shift_direction:left;
+			
+			&.active {
+				@include offcanvas($shift_direction, $canvas_shift_amt);
+				#sideBar {
+					@include SB_disp(true);
+				}
+			}
+						
+			#sideBar {
+				@include offcanvas($shift_direction, -$canvas_shift_amt);
+			}
+		}
+		
+		#{&}-right {
+			$shift_direction:right;	
+			
+			&.active {
+				@include offcanvas($shift_direction, $canvas_shift_amt);
+				#sideBar {
+					@include SB_disp(true);
+				}
+			}	
+				
+			#sideBar {
+				@include offcanvas($shift_direction, -$canvas_shift_amt);
+			}
+		}
+	}
+	
+/************
+	 SIDE BAR
+ ************/	
+	#sidebar {
+		color: $link_color;
+		@include SB_disp(false);
+		width: $canvas_shift_amt;
+		@include backgroundColor (true);
+				
+		.nav {
+			li {
+				color:$dark_gray;
+				background: linear-gradient(#3E3E3E, #383838);
+				border-top: 1px solid #484848;
+				border-bottom: 1px solid #2E2E2E;
+				
+				&:first-child { border-top: 0; }
+				
+				&:active {
+					.nav { display:block; }
+					a {											
+						.caret {
+							border-left-color: transparent;
+							border-top-color: $link_color;
+							border-bottom-color: $link_color;
+						}
+						
+						&:hover, &:focus {					
+							.caret {
+								border-left-color: transparent;
+								border-top-color: $link_color;
+								border-bottom-color: $link_color;
+							}
+						}
+					}
+				}
+				
+				a {
+					color:$dark_gray;
+					img { max-width: 14px; }
+					
+					.caret {
+						border-left-color: $link_color;
+						border-top-color: transparent;
+						border-bottom-color: transparent;
+					}
+					
+					&:hover, &:focus {
+						text-decoration: none;
+						background: linear-gradient(#373737, #323232);
+						color:$link_color;
+					
+						.caret {
+							border-left-color: $link_color;
+							border-top-color: transparent;
+							border-bottom-color: transparent;
+						}
+					}
+				}				
+			}
+		}
+	}	
+}
