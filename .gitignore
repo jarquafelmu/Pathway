@@ -192,12 +192,12 @@ $RECYCLE.BIN/
 # Packages
 *.egg
 *.egg-info
-#dist/
+dist/
 build/
 eggs/
 parts/
 var/
-#sdist/
+sdist/
 develop-eggs/
 .installed.cfg
 
