@@ -221,6 +221,7 @@ pip-log.txt
 #directories
 _notes/
 
-# files
+# file extenstions
 *.pdf
 *.ai
+*.lnk
