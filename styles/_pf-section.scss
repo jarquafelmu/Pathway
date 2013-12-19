@@ -5,10 +5,27 @@ $red: 	#cb4830;
 $teal: 	#1b8080;
 $gray: 	#666;
 
+$page_header_logo_width: 51px;
+$page_header_logo_offset: 13px;
+$page_header_logo_position: $page_header_logo_width + $page_header_logo_offset;
+
 /**************************
    PF-SECTION STYLE SHEET
  **************************/
+.hero {
+	@media (min-width: 480px) {
+		padding-left: $page_header_logo_position;
+	}
+	
+	img {
+		left: 0 !important;
+	}
+}
+
 .pf-section {
+	@media (min-width: 480px) {
+		padding-left: $page_header_logo_position;
+	}
 	h3 {
 		font-size: 1.2em;
 		color: $red;
@@ -25,7 +42,7 @@ $gray: 	#666;
 			font-size:16px;
 		}
 	}
-	img {
+	p ~ img {
 		width: 70%;
 		@media (max-width: 479px) {
 			width: 100%;
@@ -39,10 +56,22 @@ $gray: 	#666;
 	text-transform: uppercase;
 	position: relative;
 	
+	
+	h1 {
+		font-size:2.15em;
+	}
+	
+	h2 {
+		font-size:1.7em;
+	}
+	
 	img {
 		position: absolute;		
 		top: 15%;
-		left: -64px;
-		max-width:51px;
+		left: -$page_header_logo_position;
+		@media (max-width: 479px) {
+			display:none;
+		}
+		max-width: $page_header_logo_width;
 	}
 }
