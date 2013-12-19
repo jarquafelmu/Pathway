@@ -220,6 +220,7 @@ pip-log.txt
 
 #directories
 _notes/
+gitignore/
 
 # file extenstions
 *.pdf
