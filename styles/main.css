@@ -475,7 +475,6 @@ body {
 #sidebar {
   background-color: #f7f7f7;
   padding: 0;
-  padding-top: 80px;
 }
 
 #sidebar img {
@@ -484,8 +483,9 @@ body {
 }
 
 #sidebar .header {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 80px;
 }
 
 #sidebar .header li {
@@ -518,7 +518,7 @@ body {
 #sidebar .nav .nav {
   display: none;
   margin-bottom: 8px;
-  padding-left: 1.8em;
+  padding-left: .8em;
 }
 
 #sidebar .nav li.active {
@@ -550,17 +550,43 @@ body {
 
 #sidebar #sideNav {
   width: 243px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 992px) {
+  #sidebar #sideNav {
+    width: 187.5px;
+    font-size: 13px;
+  }
+
+  #sidebar #sideNav .nav .nav {
+    padding-left: 0.8em;
+  }
+
+  #sidebar #sideNav h3 {
+    font-size: 20px;
+  }
+
+  #sidebar #sideNav img {
+    width: 33.75px;
+    height: 33.75px;
+  }
 }
 
 #sidebar #sideNav.affix {
   position: fixed;
-  top: 100px;
+  top: 0;
 }
 
 #sidebar #sideNav.affix-bottom {
   position: absolute;
   top: auto;
   bottom: 200px;
+}
+
+#sidebar #sideNav.affix-top {
+  top: 0;
 }
 
 /***************
