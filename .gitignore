@@ -222,7 +222,10 @@ pip-log.txt
 _notes/
 gitignore/
 
-# file extenstions
-*.pdf
+# file extensions
 *.ai
 *.lnk
+
+#files
+website_contentpageexample.pdf
+website_homepage.pdf
