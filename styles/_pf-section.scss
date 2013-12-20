@@ -9,6 +9,12 @@ $page_header_logo_width: 51px;
 $page_header_logo_offset: 13px;
 $page_header_logo_position: $page_header_logo_width + $page_header_logo_offset;
 
+@mixin box-shadow ($parameters) {
+	-webkit-box-shadow: $parameters;
+	-moz-box-shadow:    $parameters;
+	box-shadow:         $parameters;
+}
+
 /**************************
    PF-SECTION STYLE SHEET
  **************************/
@@ -26,6 +32,8 @@ $page_header_logo_position: $page_header_logo_width + $page_header_logo_offset;
 	@media (min-width: 480px) {
 		padding-left: $page_header_logo_position;
 	}
+	
+	a {color:$red;}
 	h3 {
 		font-size: 1.2em;
 		color: $red;
@@ -47,6 +55,26 @@ $page_header_logo_position: $page_header_logo_width + $page_header_logo_offset;
 		@media (max-width: 479px) {
 			width: 100%;
 		}
+	}
+	
+	.formula {
+		width:75%;
+		text-align:center;
+		margin:0 auto;
+		font-size:1.5em;
+		background-color:$pathway-orange;
+		color:white;
+		padding:10px;
+		@include box-shadow(7px 7px 10px rgba(50, 50, 50, 0.34));
+		/* .part1 {
+			color:$turquoise;
+		}
+		.part2 {
+			color:$navy_blue;
+		}
+		.part3 {
+			color:$red;
+		} */
 	}
 }
 

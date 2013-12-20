@@ -385,6 +385,10 @@ div.feature img {
   }
 }
 
+.pf-section a {
+  color: #cb4830;
+}
+
 .pf-section h3 {
   font-size: 1.2em;
   color: #cb4830;
@@ -416,6 +420,18 @@ div.feature img {
   .pf-section p ~ img {
     width: 100%;
   }
+}
+
+.pf-section .formula {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.5em;
+  background-color: #f3a91e;
+  color: white;
+  padding: 10px;
+  -webkit-box-shadow: 7px 7px 10px rgba(50, 50, 50, 0.34);
+  box-shadow: 7px 7px 10px rgba(50, 50, 50, 0.34);
 }
 
 .pf-page-header {
@@ -699,4 +715,41 @@ body {
     border-top-color: transparent;
     border-bottom-color: transparent;
   }
+}
+
+/* CSS Document */
+
+#PathwayTuition {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #becb88;
+  color: #4f5d15;
+  text-align: center;
+}
+
+#PathwayTuition caption {
+  background-color: #becb88;
+  color: white;
+  padding: 20px;
+}
+
+#PathwayTuition tr:nth-child(odd),
+#PathwayTuition td:nth-child(even),
+#PathwayTuition th:nth-child(even) {
+  text-align: center;
+  color: #4f5d15;
+  background: #becb88;
+  /* The Fallback */
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#PathwayTuition tr:nth-child(even),
+#PathwayTuition td:nth-child(odd),
+#PathwayTuition th:nth-child(odd) {
+  text-align: center;
+  color: #4f5d15;
+  background: #becb88;
+  /* The Fallback */
+  background: rgba(0, 0, 0, 0.1);
 }
