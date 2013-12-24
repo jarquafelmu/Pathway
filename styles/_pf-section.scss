@@ -102,4 +102,8 @@ $page_header_logo_position: $page_header_logo_width + $page_header_logo_offset;
 		}
 		max-width: $page_header_logo_width;
 	}
+	
+	p {
+		text-transform: none;
+	}
 }

@@ -462,6 +462,10 @@ div.feature img {
   }
 }
 
+.pf-page-header p {
+  text-transform: none;
+}
+
 /************************
 	 SIDE BAR STYLE SHEET
  ************************/
