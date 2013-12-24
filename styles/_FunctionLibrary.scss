@@ -1,0 +1,19 @@
+@mixin border($locationList, $commands) {
+	@if $locationList == 'all' {
+		border: $commands;
+	} @else {
+		@each $location in $locationList {
+			#{border- + $location}: $commands;
+		}
+	}
+}
+
+@mixin padding($locationList, $commands) {
+	@if $locationList == 'all' {
+		padding: $commands;
+	} @else {
+		@each $location in $locationList {
+			#{padding- + $location}: $commands;
+		}
+	}
+}
