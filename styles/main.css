@@ -556,16 +556,31 @@ body {
   display: block;
 }
 
-#sidebar .nav a:hover .caret {
-  border-left-color: #2a6496;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
+#sidebar .nav li.active .caret {
+  border-top: 4px solid #428bca;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 0px dotted;
+}
+
+#sidebar .nav li.active a:hover .caret {
+  border-top: 4px solid #428bca;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 0px dotted;
 }
 
 #sidebar .nav .caret {
   border-top: 4px solid transparent;
-  border-right: 0px dotted;
   border-bottom: 4px solid transparent;
+  border-right: 0px dotted;
+  border-left: 4px solid #428bca;
+}
+
+#sidebar .nav a:hover .caret {
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 0px dotted;
   border-left: 4px solid #428bca;
 }
 

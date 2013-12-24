@@ -121,21 +121,27 @@ body {
 			.nav {
 				display:block;
 			}
+			
+			
+			.caret {
+				@include caret(true, #428bca);
+			}
+		
+			a:hover {
+				.caret {
+					@include caret(true, #428bca);
+				}
+			}
+		}
+		
+		.caret {
+			@include caret(false, #428bca);
 		}
 		
 		a:hover {
 			.caret {
-				border-left-color: #2a6496;
-				border-top-color: transparent;
-				border-bottom-color: transparent;
+				@include caret(false, #428bca);
 			}
-		}
-			
-		.caret {
-			border-top: 4px solid transparent;
-			border-right: 0px dotted;
-			border-bottom: 4px solid transparent;
-			border-left: 4px solid #428bca;
 		}
 	}
 	
