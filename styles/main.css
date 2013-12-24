@@ -737,6 +737,11 @@ body {
   }
 }
 
+html {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
 /* CSS Document */
 
 #PathwayTuition {
