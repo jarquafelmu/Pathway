@@ -1,4 +1,4 @@
-@mixin border($locationList, $commands) {
+@mixin border ($locationList, $commands) {
 	@if $locationList == 'all' {
 		border: $commands;
 	} @else {
@@ -8,12 +8,24 @@
 	}
 }
 
-@mixin padding($locationList, $commands) {
+@mixin padding ($locationList, $commands) {
 	@if $locationList == 'all' {
 		padding: $commands;
 	} @else {
 		@each $location in $locationList {
 			#{padding- + $location}: $commands;
 		}
+	}
+}
+
+@mixin caret ($isActive, $color) {
+	@if ($isActive == true) {
+		@include border(top, 4px solid $color);
+		@include border(left right, 4px solid transparent);
+		@include border(bottom, 0px dotted);
+	} @else {
+		@include border(top bottom, 4px solid transparent);
+		@include border(right, 0px dotted);
+		@include border(left, 4px solid $color);		
 	}
 }
