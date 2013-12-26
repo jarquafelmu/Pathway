@@ -29,3 +29,8 @@
 		@include border(left, 4px solid $color);		
 	}
 }
+
+@mixin transparent ($color, $opacity, $fallback) {
+	background: $fallback; /* The Fallback */
+	background: rgba($color, $opacity);
+}

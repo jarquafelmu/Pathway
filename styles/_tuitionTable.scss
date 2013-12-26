@@ -1,10 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-@mixin transparent ($color, $opacity, $fallback) {
-	background: $fallback; /* The Fallback */
-	background: rgba($color, $opacity);
-}
 
 #PathwayTuition {
 	$font-color:#4f5d15;
