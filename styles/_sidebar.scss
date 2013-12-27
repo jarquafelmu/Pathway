@@ -37,6 +37,21 @@ $gray-aside:#f7f7f7;
 	}
 }
 
+@mixin row_offcanvas ($shift_direction, $canvas_shift_amt) {
+	.row-offcanvas-#{$shift_direction} {
+		&.active {
+			@include offcanvas($shift_direction, $canvas_shift_amt);
+			#sidebar {
+				@include SB_disp(true);
+			}
+		}
+		#sidebar {
+			@include offcanvas($shift_direction, -$canvas_shift_amt);
+		}
+	}	
+		
+}
+
 /************************
 	 SIDE BAR STYLE SHEET
  ************************/
@@ -122,7 +137,6 @@ body {
 				display:block;
 			}
 			
-			
 			.caret {
 				@include caret(true, #428bca);
 			}
@@ -179,7 +193,8 @@ body {
 		}
 		
 		&.affix-top {
-			top:0;
+			top:100px;
+			position:fixed;
 		}
 	}
 }
@@ -197,42 +212,15 @@ body {
 	$transition:all 0.25s ease-out;
 	$canvas_shift_amt: 41.6%;
 
-	.row_offcanvas {
+	.row-offcanvas {
 		position: relative;
 		-webkit-transition: $transition;
 		-moz-transition: $transition;
 		transition: $transition;
-		
-		#{&}-left {
-			$shift_direction:left;
-			
-			&.active {
-				@include offcanvas($shift_direction, $canvas_shift_amt);
-				#sideBar {
-					@include SB_disp(true);
-				}
-			}
-						
-			#sideBar {
-				@include offcanvas($shift_direction, -$canvas_shift_amt);
-			}
-		}
-		
-		#{&}-right {
-			$shift_direction:right;	
-			
-			&.active {
-				@include offcanvas($shift_direction, $canvas_shift_amt);
-				#sideBar {
-					@include SB_disp(true);
-				}
-			}	
-				
-			#sideBar {
-				@include offcanvas($shift_direction, -$canvas_shift_amt);
-			}
-		}
 	}
+
+	@include row_offcanvas(left, $canvas_shift_amt);
+	@include row_offcanvas(right, $canvas_shift_amt);
 	
 /************
 	 SIDE BAR

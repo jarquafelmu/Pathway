@@ -622,7 +622,8 @@ body {
 }
 
 #sidebar #sideNav.affix-top {
-  top: 0;
+  top: 100px;
+  position: fixed;
 }
 
 /***************
@@ -635,33 +636,33 @@ body {
   	 ROW CANVAS
    **************/
 
-  .row_offcanvas {
+  .row-offcanvas {
     position: relative;
     -webkit-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
   }
 
-  .row_offcanvas .row_offcanvas-left.active {
+  .row-offcanvas-left.active {
     left: 41.6%;
   }
 
-  .row_offcanvas .row_offcanvas-left.active #sideBar {
+  .row-offcanvas-left.active #sidebar {
     display: block;
   }
 
-  .row_offcanvas .row_offcanvas-left #sideBar {
+  .row-offcanvas-left #sidebar {
     left: -41.6%;
   }
 
-  .row_offcanvas .row_offcanvas-right.active {
+  .row-offcanvas-right.active {
     right: 41.6%;
   }
 
-  .row_offcanvas .row_offcanvas-right.active #sideBar {
+  .row-offcanvas-right.active #sidebar {
     display: block;
   }
 
-  .row_offcanvas .row_offcanvas-right #sideBar {
+  .row-offcanvas-right #sidebar {
     right: -41.6%;
   }
 

@@ -4,10 +4,10 @@
 
 	"default": {
 
-		"host": "ftp.example.com",
-		"username": "your_login",  // or null for anonymous login
-		"password": "your_password",
-		"path": "/",
+		"host": "thefactory.comeze.com",
+		"username": "a5621005",  // or null for anonymous login
+		"password": "dependzero1",
+		"path": "/public_html/pathway/",
 
 		"upload_on_save": true // set *false* if you do not want to upload on save!
 
