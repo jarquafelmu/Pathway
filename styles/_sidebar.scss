@@ -72,7 +72,7 @@ body {
 	margin-#{$direction}: 10px;
 } 
  
-#sidebar {0
+#sidebar {
 	$logo_size:45px;
 	position: relative;
 	background-color: $gray-aside;
@@ -213,7 +213,7 @@ body {
 /**************
 	 ROW CANVAS
  **************/
-	$transition:all 0.25s ease-out;
+	$transition:all 0.35s ease;
 	$canvas_shift_amt: 41.6%;
 
 	.row-offcanvas {

@@ -36,6 +36,12 @@
 	}
 }
 
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	transition: $transition;
+}
+
 @mixin transparent ($color, $opacity, $fallback) {
 	background: $fallback; /* The Fallback */
 	background: rgba($color, $opacity);

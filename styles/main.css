@@ -494,6 +494,7 @@ body {
 }
 
 #sidebar {
+  position: relative;
   background-color: #dedede;
   padding: 0;
   padding-left: 10px;
@@ -644,8 +645,8 @@ body {
 
   .row-offcanvas {
     position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
   }
 
   .row-offcanvas-left.active {
