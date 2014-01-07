@@ -539,17 +539,12 @@ body {
 #sidebar {
   position: relative;
   background-color: #dedede;
-  padding: 0;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 #sidebar img {
   width: 45px;
   height: 45px;
 }
 #sidebar .header {
-  padding-left: 15px !important;
-  padding-right: 15px !important;
   padding-top: 80px;
 }
 #sidebar .header li {
@@ -566,6 +561,8 @@ body {
 }
 #sidebar .header a img {
   position: absolute;
+  top: -15px;
+  left: -15px;
 }
 #sidebar .header p {
   text-transform: none;
@@ -576,12 +573,6 @@ body {
 #sidebar .nav .nav {
   display: none;
   padding-left: .8em;
-}
-#sidebar .nav li {
-  padding: 10px 15px;
-}
-#sidebar .nav li a, #sidebar .nav li a:hover, #sidebar .nav li a:visited {
-  padding: 0;
 }
 #sidebar .nav li.active {
   color: #cb4830;
@@ -616,12 +607,8 @@ body {
   border-right: 0px dotted;
   border-left: 4px solid #428bca;
 }
-#sidebar #sideNav {
-  width: 222.5px;
-}
 @media (max-width: 992px) {
   #sidebar #sideNav {
-    width: 187.5px;
     font-size: 13px;
   }
   #sidebar #sideNav .nav .nav {
@@ -807,7 +794,7 @@ html {
 /* Breadcrumb Styles
  ---------------------------------------------------------------------*/
 .breadCrumbHolder {
-  border-bottom: #a0a0a0 solid 1px;
+  border-bottom: #a0a0a0 solid 2px;
   background: #fff;
 }
 

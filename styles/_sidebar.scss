@@ -76,8 +76,8 @@ body {
 	$logo_size:45px;
 	position: relative;
 	background-color: $gray-aside;
-	@include padding(all, 0);
-	@include padding(left right, 10px);
+	//@include padding(all, 0);
+	//@include padding(left right, 10px);
 	
 	img {
 		width: $logo_size;
@@ -88,7 +88,7 @@ body {
 		$offsetRatio: (1/3);
 		$offset:$logo_size * $offsetRatio;
 		
-		@include padding(left right, $offset !important);
+		//@include padding(right, $offset !important);
 		@include padding(top, 80px);
 		
 		li {
@@ -107,6 +107,8 @@ body {
 			img {
 				position: absolute;
 				@include positionOffset(top left, -$offset);
+				top: -15px;
+				left: -15px;
 			}
 		}
 		
@@ -128,9 +130,9 @@ body {
 
 		li {
 			// margin-bottom: 8px;
-			@include padding(all, 10px 15px);
+			//@include padding(all, 10px 15px);
 			a, a:hover, a:visited {
-				@include padding(all, 0);
+				//@include padding(all, 0);
 			}
 			&.active {
 				color:$red;
@@ -168,9 +170,8 @@ body {
 	
 	
 	#sideNav {
-		width:222.5px;
 		@media (max-width: 992px) {
-			width: 187.5px;
+			//width: 187.5px;
 			font-size:13px;
 			.nav .nav {
 				padding-left:0.8em;

@@ -29,7 +29,7 @@ $box-height:30px;
 $line-height:21px;
 
 .breadCrumbHolder {
-	@include border(bottom, #a0a0a0 solid 1px);
+	@include border(bottom, #a0a0a0 solid 2px);
 	background:#fff;
 }
 
